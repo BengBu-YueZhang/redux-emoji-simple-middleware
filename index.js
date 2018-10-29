@@ -1,12 +1,12 @@
 const emoji = stroe => next => action => {
   try {
-    console.log('😐')
+    console.log(`😐 ${action.type}`)
     let result = next(action)
-    console.log('😂')
+    console.log(`😂 ${action.type}`)
     return result
   } catch (error) {
     console.log(error)
-    console.log('😢')
+    console.log(`😢 ${action.type}`)
   }
 }
 
